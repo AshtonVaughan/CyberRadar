@@ -1,30 +1,51 @@
-# 🛡️ CyberRadar
+> **Archived** - This project is no longer maintained. It's preserved here as a record of a past build. What it led to: a much deeper interest in security tooling that eventually became [ProjectTriage](https://github.com/AshtonVaughan/ProjectTriage).
 
-**CyberRadar** is a real-time cybersecurity news aggregator, search engine, and archive.  
-It combines dozens of top sources, Google News queries, and infosec RSS feeds,  
-then archives every unique story locally for lightning-fast, Ctrl+F-style search—forever!
+---
+
+# CyberRadar
+
+**Real-time cybersecurity news aggregator and local archive**
+
+CyberRadar pulls from dozens of security RSS feeds and Google News queries, deduplicates stories, and archives everything to a local SQLite database. The PyQt6 interface lets you search and filter your full history of cyber news instantly.
+
+Built in 2024 as a personal threat intel dashboard.
 
 ---
 
 ## Features
 
-- 🚀 **Continuous background news fetching and archiving**  
-- 📰 **Global cyber news coverage** via Google News + 15+ top security feeds  
-- 🔍 **Instant search and filtering** by keyword, source, and date  
-- 🕵️ **No duplicates** and never miss breaking headlines  
-- 💾 **Local SQLite database archive**—your own, private, full-history cyber threat intel
-- 🌐 **Modern PyQt6 interface**—click any headline to read full story  
-- 🛡️ **Production-ready**: stable, robust, and scalable for daily use  
-- 🕰️ **Open source, cross-platform, and free**
+- Continuous background fetching across 15+ security feeds and Google News
+- Instant search by keyword, source, and date
+- Local SQLite archive - your own private history of the cyber news landscape
+- No duplicates - deduplication runs on every fetch cycle
+- Click any headline to open the full story in your browser
+- Cross-platform PyQt6 interface
 
 ---
 
 ## Getting Started
 
-### 1. **Install Python 3.8+**
+### Requirements
 
-- [Download Python here](https://www.python.org/downloads/)
+- Python 3.8+
+- PyQt6, feedparser, requests
 
-### 2. **Install required Python packages using Terminal for MacOS or Powershell for Windows**
-
+```bash
 pip install PyQt6 feedparser requests
+```
+
+### Run
+
+```bash
+git clone https://github.com/AshtonVaughan/CyberRadar.git
+cd CyberRadar
+python main.py
+```
+
+The app starts fetching immediately. All articles are stored in a local `cyberradar.db` SQLite file in the project directory.
+
+---
+
+## License
+
+MIT
